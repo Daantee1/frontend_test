@@ -1,0 +1,197 @@
+footer {
+    background-color: #181818;
+    width: 100%;
+    height: 6rem;
+}
+
+.footer_items {
+    color: white;
+    display: flex;
+    position: relative;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1.5rem;
+}
+
+.footer_company-name {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.2;
+    font-weight: normal;
+    letter-spacing: 0.05rem;
+}
+
+.footer_company-name hr {
+    width: 25px;
+    margin: 0 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    border-top: 1px solid white;
+    text-align: center;
+}
+
+.footer_left-title {
+    opacity: 0.1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-weight: normal;
+    font-size: 1rem;
+    padding: 0.2rem;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.footer_left-title span {
+    margin-right: -1.4rem;
+    padding: 0;
+}
+
+.footer_left-title::before {
+    cursor: auto;
+    content: '';
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    border: 1px solid white;
+    transition: border 0.3s ease;
+}
+
+.footer_left-title:hover::before {
+    border: 1px solid gold;
+    animation: rotateFrame 1s linear;
+}
+
+.footer_left-title:hover {
+    opacity: 1;
+}
+
+.footer_menu-toggle {
+    display: none;
+}
+
+.footer_dropdown-menu {
+    display: none;
+    position: absolute;
+    bottom: calc(100%);
+    width: 12.7rem;
+    background-color: white;
+    padding: 0.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 2px;
+    color: black;
+    font-size: small;
+    font-weight: bold;
+}
+
+
+
+.footer_dropdown-menu a {
+    display: flex;
+    align-items: center;
+    margin: 0.3rem 0.3rem;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.footer_dropdown-menu a:hover {
+    color: gold;
+}
+
+.footer_button-show {
+    position: relative;
+    display: flex;
+    width: 12rem;
+    justify-content: center;
+    opacity: 0.8;
+    color: white;
+    font-weight: bold;
+    background: transparent;
+    border: 0.5px solid rgb(54, 54, 54);
+    padding: 0.8rem;
+    border-radius: 2px;
+    font-size:small;
+    cursor: pointer;
+    
+}
+
+
+.footer_button-show:hover {
+    opacity: 1;
+    border: 0.5px solid white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.footer_arrow-up,
+.footer_arrow-down {
+    opacity: 0.8;
+    margin-left: 0.5rem;
+}
+
+.footer_arrow-down {
+    display: none;
+}
+.footer_arrow-right-g{
+    display: none;
+}
+
+.footer_button-show:hover .footer_arrow-up {
+    display: inline-block;
+    opacity: 1;
+}
+
+.footer_button-show:hover .footer_arrow-down {
+    display: none;
+}
+
+.footer_menu-toggle:checked + .footer_button-show .footer_arrow-up {
+    display: none;
+}
+
+.footer_menu-toggle:checked + .footer_button-show .footer_arrow-down {
+    display: inline-block;
+}
+.footer_menu-toggle:checked + .footer_button-show + .footer_dropdown-menu {
+    display: block; 
+}
+
+.footer_dropdown-menu a:hover .footer_arrow-right {
+    display: none;
+}
+.footer_dropdown-menu a:hover .footer_arrow-right-g {
+    display: inline-block;
+}
+
+@media screen and (max-width: 960px) {
+    .footer_company-name {
+        display: none;
+    }
+
+    .footer_button-show {
+        width: 14rem;
+    }
+  .footer_dropdown-menu{
+    width: 14.7rem;
+  
+  }
+}
+
+@keyframes rotateFrame {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

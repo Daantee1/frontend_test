@@ -1,0 +1,42 @@
+.home-contaner {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.home-container_block {
+    width: calc(31% - 1rem);
+    flex-wrap: wrap;
+
+}
+
+.home_headline {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: white;
+    font-weight: normal;
+}
+
+.home_headline hr {
+    width: 9rem;
+}
+
+@media screen and (max-width: 960px) {
+    .home-contaner {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+    }
+
+    .home-container_block {
+        width: calc(50%);
+    }
+
+    .home-container_block:last-child {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}

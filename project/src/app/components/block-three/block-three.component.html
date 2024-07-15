@@ -1,0 +1,33 @@
+<p class="block-three_title">BLOK Z DŁUGĄ NAZWĄ KTÓRA SAMA SIĘ PRZYTNIE...</p>
+<div class="block-three_text">
+  <div class="block-three_add">
+    <input
+      [(ngModel)]="newText"
+      class="block-three_input"
+      placeholder="Wpisz tekst..."
+    />
+    <button
+      (click)="addText(newText)"
+      class="block-three_button block-three_button-add"
+    >
+      Dodaj
+    </button>
+  </div>
+  @for(item of text; track text; let i = $index){
+  <div class="block-three_single-text">
+    {{ item.text.text || item.text }}
+    <button
+      (click)="editText(item)"
+      class="block-three_button block-three_button-edit"
+    >
+      Edytuj
+    </button>
+    <button
+      (click)="deleteText(item)"
+      class="block-three_button block-three_button-delete"
+    >
+      Usuń
+    </button>
+  </div>
+  }
+</div>

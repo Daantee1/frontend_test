@@ -1,0 +1,7 @@
+<div class="wrapper">
+    <div class="content">
+        <app-header></app-header>
+        <router-outlet></router-outlet>
+    </div>
+    <app-footer (showPersonalDataEvent)="header?.updateHeaderPersonalData($event)"></app-footer>
+</div>

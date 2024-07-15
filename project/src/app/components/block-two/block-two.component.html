@@ -1,0 +1,11 @@
+<p class="block-two_title">BLOK DRUGI</p>
+<div class="block-two_buttons">
+  <button class="block-two_button" (click)="replaceButton()">ZASTĄP</button>
+  <button
+    class="block-two_button"
+    [disabled]="(selectedOption$ | async) === null"
+    (click)="pasteButton()"
+  >
+    DOKLEJ
+  </button>
+</div>

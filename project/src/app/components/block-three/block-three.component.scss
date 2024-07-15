@@ -1,0 +1,62 @@
+.block-three_title{
+    margin-top: 1rem;
+    font-weight: bold;
+    color: white;
+    text-align: center; 
+    width: 100%; 
+    white-space: wrap;
+}
+.block-three_text{
+    font-weight: normal;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    color: white;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.block-three_add{
+    margin-bottom: 2rem;
+}
+.block-three_input{
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 2px;
+    padding: 0.5rem
+}
+.block-three_button{
+    opacity: 0.6;
+    display: inline-block;
+    font-weight: bold;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 0.5rem;
+    text-align: center;
+}
+.block-three_button:hover{
+    transition: filter 0.4s ease, border-color 0.4s ease;
+    background: linear-gradient(to right, #fe9c00, rgb(255, 183, 0));
+    opacity: 1;
+}
+.block-three_button-add{
+    opacity: 1;
+}
+
+.block-three_button-edit{
+    margin-right: 0.5rem;
+}
+.block-three_single-text{
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+        .block-three_title {
+            text-align: center;
+        }
+    }
